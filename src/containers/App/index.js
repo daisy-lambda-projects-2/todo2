@@ -8,10 +8,10 @@ function Todo({ todo, index, completeTodo, removeTodo }) {
       {todo.text}
       <div>
         <button onClick={() => completeTodo(index)}>
-          ✔️
+          <span role='img' aria-label='completed'>✔️</span>
         </button>
         <button onClick={() => removeTodo(index)}>
-          ❌
+          <span role='img' aria-label='delete'>❌</span>
         </button>
       </div>
     </div >
@@ -31,7 +31,7 @@ function TodoForm({ addTodo }) {
   return (
     <div className='form'>
       <form onSubmit={handleSubmit}>
-        <button>➕</button>
+        <button><span role='img' aria-label='add'>➕</span></button>
         <input
           type='text'
           className='input'
