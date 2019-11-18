@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import '../../index.css';
+import './index.css'
 
 function Todo({ todo, index, completeTodo, removeTodo }) {
   return (
