@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './index.css'
+import AppleNotification from './AppleNotification';
 
 function Todo({ todo, index, completeTodo, removeTodo }) {
   return (
@@ -77,20 +78,6 @@ function App() {
     setTodos(newTodos);
   }
 
-  // Detects if device is on iOS 
-  const isIos = () => {
-    const userAgent = window.navigator.userAgent.toLowerCase();
-    return /iphone|ipad|ipod/.test(userAgent);
-  }
-
-  console.log(window.navigator.userAgent);
-
-  // Detects if device is in standalone mode
-  const isInStandaloneMode = () => ('standalone' in window.navigator) && (window.navigator.standalone);
-
-  // Checks if should display install popup notification:
-
-
 
   return (
     <div className='app'>
@@ -100,13 +87,7 @@ function App() {
           return < Todo key={index} index={index} todo={todo} completeTodo={completeTodo} removeTodo={removeTodo} />
         })}
         <TodoForm addTodo={addTodo} />
-        {
-          isIos() && !isInStandaloneMode()
-            ? <div className="main-div">
-              <p>For a better experience, open this page in Safari, press the Action menu at the bottom center and press 'Add to Home Screen'. Enjoy!</p>
-            </div>
-            : null
-        }
+        <AppleNotification />
       </div>
     </div>
   )
