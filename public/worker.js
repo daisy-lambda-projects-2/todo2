@@ -1,4 +1,6 @@
-var CACHE_NAME = 'pwa-todo-app';
+// var CACHE_NAME = 'pwa-todo-app';
+var CACHE_NAME = 'pwa-todo-app-v2';
+
 var urlsToCache = [
     '/'
 ];
