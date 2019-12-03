@@ -15,10 +15,10 @@ code {
 
 .app {
   background: #604ea0;
-  padding: 30px;
-  height: 95vh;
+  /* padding: 30px; */
+  height: 100vh;
 }
-
+/* 
 .todo-list {
   background: #ff8d5d;
   border-radius: 4px;
@@ -70,4 +70,4 @@ button {
   display: flex;
   align-items: center;
   justify-content: space-between;
-}
+} */
