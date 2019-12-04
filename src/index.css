@@ -19,7 +19,7 @@ code {
   height: 100vh;
 }
 
-.todo-list {
+/* .todo-list {
   background: #ff8d5d;
   border-radius: 4px;
   padding: 5px;
@@ -70,4 +70,4 @@ button {
   display: flex;
   align-items: center;
   justify-content: space-between;
-}
+} */
